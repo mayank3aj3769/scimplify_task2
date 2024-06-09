@@ -1,8 +1,8 @@
 # It's a simple session based authentication built using fastAPI in python
 
 - Clone the repository and run the following the command to fire the server.
-    `pip install -r requirement.txt`
-    `uvicorn main:app --reload `
+   - `pip install -r requirement.txt`
+   - `uvicorn main:app --reload `
 
 - There are 5 routes
   -  `/api/signup` -  Allows a user to sign up using email and password and stores the same in a mongoDB cluster.
