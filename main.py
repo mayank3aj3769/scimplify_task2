@@ -5,11 +5,11 @@ from upload import router as upload_router
 
 app = FastAPI()
 
-# Include the routers
+# Routers
 app.include_router(auth_router, prefix="/api")
 app.include_router(upload_router, prefix="/api")
 
-# Create uploads directory if not exists
+# Creates uploads directory if it does not exists
 if not os.path.exists('pictures'):
     os.makedirs('pictures')
 

@@ -5,7 +5,7 @@ from urllib.parse import quote_plus
 username = quote_plus('rmayank331')
 password = quote_plus('M@yank123')
 uri = f"mongodb+srv://{username}:{password}@scimplifi.zd8d2lf.mongodb.net/?retryWrites=true&w=majority&appName=scimplifi"
-client = AsyncIOMotorClient(uri)
+client = AsyncIOMotorClient(uri) # mongoDB driver suited for async operations
 db = client["scimplify"]
 users_collection = db["users"]
 pictures_collection = db["pictures"]

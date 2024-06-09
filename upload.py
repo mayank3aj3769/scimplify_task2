@@ -8,8 +8,10 @@ router = APIRouter()
 @router.post("/upload-picture")
 async def upload_picture(file: UploadFile = File(...), user = Depends(get_current_user)):
     file_location = f"pictures/{file.filename}"
+    print(file_location)
     with open(file_location, "wb") as file_object:
         file_object.write(file.file.read())
+    print(f"file object : {file_object}")
     await pictures_collection.insert_one({"email": user["email"], "file_path": file_location})
     return {"info": "file uploaded successfully", "file_path": file_location}
 
