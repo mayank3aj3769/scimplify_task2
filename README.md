@@ -1,6 +1,7 @@
 # It's a simple session based authentication built using fastAPI in python
 
-- Clone the repository and run the following the command to fire the server. 
+- Clone the repository and run the following the command to fire the server.
+    `pip install -r requirement.txt`
     `uvicorn main:app --reload `
 
 - There are 5 routes
